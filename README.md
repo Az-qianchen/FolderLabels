@@ -2,7 +2,10 @@
 <div align="center">
 <img width="256" height="256" alt="7c3e898b-df2f-4bf0-9251-4b9cd579fd62" src="https://github.com/user-attachments/assets/a7942978-98fc-4eb3-96bc-fcea4334e6da" />
 </div>
+
 开启插件后会自动在根目录生成一个labels.cfg
+
+<img width="568" height="40" alt="image" src="https://github.com/user-attachments/assets/b54fba21-b282-4752-9300-8742b3edb53e" />
 
 ### 示例配置
 ```
@@ -19,6 +22,8 @@ labels 中的键值会全局匹配，只要名称符合就会为其添加标签
 path_labels  中的键值必须符合路径才会为其添加标签
 
 path_labels 优先级高于 labels
+
+<img width="568" height="411" alt="image" src="https://github.com/user-attachments/assets/dc01bad3-c9fc-4c9e-8712-6ed7c5228c8d" />
 
 ### 功能示例
 
