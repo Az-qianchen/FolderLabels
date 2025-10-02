@@ -1,6 +1,6 @@
 # Folder Labels
 <div align="center">
-<img width="256" height="256" alt="7c3e898b-df2f-4bf0-9251-4b9cd579fd62" src="https://github.com/user-attachments/assets/a7942978-98fc-4eb3-96bc-fcea4334e6da" />
+<img width="256" height="256" alt="FolderLabels" src="https://github.com/user-attachments/assets/bf8ad696-bc2b-43dc-880b-72a29104fc78" />
 </div>
 
 开启插件后会自动在根目录生成一个labels.cfg
