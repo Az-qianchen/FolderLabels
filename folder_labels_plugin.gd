@@ -14,7 +14,7 @@ extends EditorPlugin
 ## 配置文件路径
 const CONFIG_PATH := "res://labels.cfg" # 映射配置文件路径
 ## FileSystemDock 实例
-var file_system_dock: Node
+var file_system_dock: FileSystemDock
 ## EditorFileSystem 实例，用于监听资源刷新
 var editor_fs
 ## 文件树信息
@@ -113,7 +113,7 @@ func _load_labels() -> void:
 	var cfg := ConfigFile.new()
 	var err := cfg.load(CONFIG_PATH)
 	# 没有配置则初始化配置
-	if err == ERR_DOES_NOT_EXIST:
+	if err == ERR_FILE_NOT_FOUND or err == ERR_DOES_NOT_EXIST:
 		_create_default_config()
 		err = cfg.load(CONFIG_PATH)
 	if err != OK:
@@ -152,6 +152,9 @@ func _create_default_config() -> void:
 	var save_err := cfg.save(CONFIG_PATH)
 	if save_err != OK:
 		push_warning("Folder Labels: 无法创建默认配置 (%d)" % save_err)
+	else:
+		EditorInterface.get_resource_filesystem().scan()
+		print("创建文件:",CONFIG_PATH)
 
 ## 清洗路径
 func _normalize_path(path: String) -> String:
